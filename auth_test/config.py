@@ -5,10 +5,10 @@ import os
 
 
 class Settings(BaseSettings):
-    app_name: str = "CRUD-1"
-    app_port: int = os.getenv("PORT", 8000)
-    app_secret_key: str = \
-        'e6f73607f6160ca4df753e95a23055e30cc04fc03398930733df09841c462a49'
+    app_name: str = "Auth"
+    app_port: int = os.getenv("APP_PORT", 8000)
+    app_secret_key: str = os.getenv("APP_SECRET_KEY")
+    app_refresh_secret_key: str = os.getenv("APP_REFRESH_SECRET_KEY")
 
     class Config:
         env_file = ".env"
